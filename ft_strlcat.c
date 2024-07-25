@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aitor <aitor@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 15:13:18 by aitormar          #+#    #+#             */
-/*   Updated: 2024/07/20 15:29:18 by aitormar         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:13:32 by aitor            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	slen = ft_strlen(src);
 	i = 0;
 	if (size == 0)
-		return (slen + dlen);
+		return (slen);
 	if (size <= dlen)
-		return (slen + dlen);
-	while (src[i] != '\0' && dlen < (size - 1) && dst != src)
+		return (slen + size);
+	while (src[i] && (dlen + i) < (size - 1))
 	{
 		dst[dlen + i] = src[i];
 		i++;

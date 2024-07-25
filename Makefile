@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+         #
+#    By: aitor <aitor@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/20 13:24:18 by aitormar          #+#    #+#              #
-#    Updated: 2024/07/20 16:35:02 by aitormar         ###   ########.fr        #
+#    Updated: 2024/07/25 14:10:54 by aitor            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ CCFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
 
-MY_SOURCES =ft_isdigit.c\
+MY_SOURCES = ft_isalpha.c\
+						ft_isdigit.c\
 						ft_isalnum.c\
-						ft_isalpha.c\
 						ft_isascii.c\
 						ft_isprint.c\
 						ft_strlen.c\
@@ -34,6 +34,12 @@ MY_SOURCES =ft_isdigit.c\
 						ft_strchr.c\
 						ft_strrchr.c\
 						ft_strncmp.c\
+						ft_memchr.c\
+						ft_memcmp.c\
+						ft_strnstr.c\
+						ft_atoi.c\
+						ft_calloc.c\
+						ft_strdup.c
 
 
 OBJS = $(MY_SOURCES:.c=.o)
