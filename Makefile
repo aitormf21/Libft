@@ -6,7 +6,7 @@
 #    By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/20 13:24:18 by aitormar          #+#    #+#              #
-#    Updated: 2024/09/02 13:08:29 by aitormar         ###   ########.fr        #
+#    Updated: 2024/09/02 16:21:45 by aitormar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,14 @@ MY_SOURCES = ft_isalpha.c\
 						ft_split.c\
 
 MY_BONUS_SOURCES = ft_lstnew.c\
-						
+						ft_lstadd_front.c\
+						ft_lstsize.c\
+						ft_lstlast.c\
+						ft_lstadd_back.c\
+						ft_lstdelone.c\
+						ft_lstclear.c\
+
+
 
 OBJS = $(MY_SOURCES:.c=.o)
 BONUS_OBJS = $(MY_BONUS_SOURCES:.c=.o)

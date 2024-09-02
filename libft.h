@@ -6,7 +6,7 @@
 /*   By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 12:58:33 by aitormar          #+#    #+#             */
-/*   Updated: 2024/09/02 12:56:56 by aitormar         ###   ########.fr       */
+/*   Updated: 2024/09/02 16:22:20 by aitormar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,11 @@ typedef struct s_list
 }					t_list;
 
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+int		ft_lstsize(t_list *lst);
 
 #endif
