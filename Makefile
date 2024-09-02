@@ -3,19 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aitor <aitor@student.42.fr>                +#+  +:+       +#+         #
+#    By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/20 13:24:18 by aitormar          #+#    #+#              #
-#    Updated: 2024/07/25 22:41:01 by aitor            ###   ########.fr        #
+#    Updated: 2024/09/02 13:08:29 by aitormar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-CC = gcc
-CCFLAGS = -Wall -Wextra -Werror
-RM = rm -rf
-
 
 MY_SOURCES = ft_isalpha.c\
 						ft_isdigit.c\
@@ -52,17 +47,28 @@ MY_SOURCES = ft_isalpha.c\
 						ft_putnbr_fd.c\
 						ft_split.c\
 
+MY_BONUS_SOURCES = ft_lstnew.c\
+						
+
 OBJS = $(MY_SOURCES:.c=.o)
+BONUS_OBJS = $(MY_BONUS_SOURCES:.c=.o)
+
+CC = gcc
+CCFLAGS = -Wall -Wextra -Werror
+RM = rm -rf
 
 $(NAME) : $(OBJS)
 	@ar crs $(NAME) $(OBJS)
 
 all: $(NAME)
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	@ar crs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 %.o : %.c
 	@$(CC) $(CCFLAGS) -c -o $@ $<
 clean:
-	@$(RM) $(OBJS)
+	@$(RM) $(OBJS) $(BONUS_OBJS)
 fclean: clean
 	@rm -f $(NAME)
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 12:58:33 by aitormar          #+#    #+#             */
-/*   Updated: 2024/07/27 13:15:01 by aitormar         ###   ########.fr       */
+/*   Updated: 2024/09/02 12:56:56 by aitormar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+t_list	*ft_lstnew(void *content);
 
 #endif
