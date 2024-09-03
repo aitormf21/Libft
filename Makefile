@@ -6,7 +6,7 @@
 #    By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/20 13:24:18 by aitormar          #+#    #+#              #
-#    Updated: 2024/09/02 16:21:45 by aitormar         ###   ########.fr        #
+#    Updated: 2024/09/02 17:36:13 by aitormar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,8 @@ MY_BONUS_SOURCES = ft_lstnew.c\
 						ft_lstadd_back.c\
 						ft_lstdelone.c\
 						ft_lstclear.c\
+						ft_lstiter.c\
+						ft_lstmap.c\
 
 
 
