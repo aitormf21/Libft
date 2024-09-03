@@ -6,7 +6,7 @@
 /*   By: aitormar <aitormar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 12:59:57 by aitormar          #+#    #+#             */
-/*   Updated: 2024/09/02 13:07:14 by aitormar         ###   ########.fr       */
+/*   Updated: 2024/09/03 12:39:35 by aitormar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	new_list->content = content;
 	new_list->next = NULL;
-
 	return (new_list);
 }
